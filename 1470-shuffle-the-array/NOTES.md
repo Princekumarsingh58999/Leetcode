@@ -1,1 +1,1 @@
-​
+I have used simple greedy apporach, its simple to suffle the array and combine the elements of the array from a first element then the last+1 element we continue the steps till we reach to the last elment that is till the size of the array.​
