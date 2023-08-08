@@ -2,13 +2,21 @@ class Solution {
 public:
     int sumOfUnique(vector<int>& nums) {
         int sum=0;
-        int a[101]={};
-        for(auto p : nums)
-            ++a[p];
-        for(auto i=1;i<=100;++i){
-           if(a[i]==1)
-                    sum+=i;}
+        map<int, int>mp;
+        for(auto i:nums)
+            mp[i]++;
+        for(auto m:mp)
+            if(m.second==1)
+              sum+=m.first;
         return sum;
+//         int sum=0;
+//         int a[101]={};
+//         for(auto p : nums)
+//             ++a[p];
+//         for(auto i=1;i<=100;++i){
+//            if(a[i]==1)
+//                     sum+=i;}
+//         return sum;
         
     }
 };
