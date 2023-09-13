@@ -1,6 +1,7 @@
 class Solution {
 public:
     bool isPowerOfThree(int n) {
+        //first methode ..........
 //                 long long int p=n;
 //         if(n<=0)
 //             return false;
@@ -22,7 +23,13 @@ public:
 //         return false;
        
         
-   //largest number for divesible to 3 in bitwine 2^31. which is given in question.     
-        return (n>0 && 1162261467%n==0);
-    }
+   //largest number for divesible to 3 in bitwine 2^31. which is given in question.  
+        // second methode ............
+    //     return (n>0 && 1162261467%n==0);
+        
+        //third methode ...............
+        if(!n) return false;
+	while(n % 3 == 0) n /= 3;    
+	return n == 1;
+     }
 };
